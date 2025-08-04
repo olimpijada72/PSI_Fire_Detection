@@ -8,9 +8,11 @@ results/*
 # Keep placeholder files if you want folders tracked
 !configs/.gitkeep
 !data/.gitkeep
-!runs/.gitkeep
-!results/.gitkeep
 !documentation/.gitkeep
+!models/.gitkeep
+!notebooks/.gitkeep
+!results/.gitkeep
+!runs/.gitkeep
 
 
 # =========================
