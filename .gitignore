@@ -1,0 +1,10 @@
+# Project based ignore
+data/*
+runs/*
+results/*
+
+# MAC files
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
