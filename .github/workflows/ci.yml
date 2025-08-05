@@ -1,8 +1,8 @@
 name: CI Checks
 
 on:
-  pull_request:
-    branches: [main]  # Runs on pull requests targeting the main branch
+  push:
+    #branches: [main]  # Runs on pull requests targeting the main branch
 
 jobs:
   checks:
