@@ -1,5 +1,5 @@
 # PSI_Fire_Detection
-Fire detection project made for Machine Learning Summer School in Petnica Summer Institute (2025) 
+Fire detection project made for Machine Learning Summer School in Petnica Summer Institute (2025)
 
 
 ## Standards of committing and branching on the repository
@@ -49,11 +49,11 @@ General adding, committing tips:
 
 
 ## Environment setup
-### Approaches to environment setup
+### 1. Virtual environment setup
 There are two approaches to running this project:
 1. Create virtual environment using Conda
 
-```bash 
+```bash
 conda create --name venv_fire python=3.10
 conda activate venv_fire
 ```
@@ -83,7 +83,9 @@ source venv/bin/activate
 
 - Note: To deactivate a virtual environment, in the terminal run `conda deactivate` for the first case, and `deactivate` for the second case.
 
-After installing and activating the virtual environment, the next step is installing dependencies:
+### 2. Installing dependencies
+
+1. After installing and activating the virtual environment, the next step is installing dependencies:
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -94,3 +96,26 @@ Optional: Verify installation and setup
 python --version        # Should be 3.10.x
 pip list                # Confirm packages are installed
 ```
+
+
+2. Pre-commit install for local linting (flake8, black, isort) (Optional, Dev only):
+```bash
+pip install pre-commit==2.13
+pre-commit install
+```
+
+3. Install Git Large file storage, for the models to be tracked
+```bash
+git lfs install
+```
+
+### 3. Visual Studio Code setup (Optional, Dev only)
+I suggest installing the following extensions, and configuring them in the settings:
+- Black formatter, then go into VS Code settings > As a Default formatter add Black formatter > Search for Black > To `Black-formatter: Args` add: `--line-length=99`.
+- Flake8, then go into VS Code settings > Search for Flake8 > For `Flake8: Import Strategy` put `fromEnvironment`.
+- isort, then go into VS Code settings > Search for Flake8 > For `isort: Import Strategy` put `fromEnvironment`.
+- Python Extension Pack is good too.
+- RainbowCSV for easier viewing of `.csv` files.
+- vscode-pdf for easier viewing of `.pdf` files.
+
+This ensures there's no need to run pre-commit each time (the linting happens automatically most of the time, because of the extensions), consequently making the code versioning part a little less daunting.
