@@ -119,3 +119,5 @@ I suggest installing the following extensions, and configuring them in the setti
 - vscode-pdf for easier viewing of `.pdf` files.
 
 This ensures there's no need to run pre-commit each time (the linting happens automatically most of the time, because of the extensions), consequently making the code versioning part a little less daunting.
+
+DELETE: test
