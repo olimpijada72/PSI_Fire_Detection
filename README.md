@@ -109,6 +109,11 @@ pre-commit install
 git lfs install
 ```
 
+4. Create and register ipykernel to be able to use custom kernel in notebooks
+```bash
+python -m ipykernel install --user --name venv_fire --display-name "Python3.10 (venv_fire)"
+```
+
 ### 3. Visual Studio Code setup (Optional, Dev only)
 I suggest installing the following extensions, and configuring them in the settings:
 - Black formatter, then go into VS Code settings > As a Default formatter add Black formatter > Search for Black > To `Black-formatter: Args` add: `--line-length=99`.
