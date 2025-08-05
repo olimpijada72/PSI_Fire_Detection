@@ -1,0 +1,66 @@
+# =========================
+# Project directories
+# =========================
+data/*
+runs/*
+results/*
+
+# Keep placeholder files if you want folders tracked
+!configs/.gitkeep
+!data/.gitkeep
+!documentation/.gitkeep
+!models/.gitkeep
+!notebooks/.gitkeep
+!results/.gitkeep
+!runs/.gitkeep
+
+
+# =========================
+# Python-specific ignores
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Package/Build directories
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Jupyter Notebooks
+# =========================
+.ipynb_checkpoints
+# Jupyter Notebook auto-saves
+*.nbconvert.ipynb
+
+# =========================
+# Logs and temp files
+# =========================
+*.log
+*.tmp
+*.swp
+*.swo
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+*.bak
+*.orig
+
+# VSCode
+.vscode/
+# PyCharm / JetBrains
+.idea/
