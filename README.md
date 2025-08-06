@@ -109,6 +109,11 @@ pre-commit install
 git lfs install
 ```
 
+4. Create and register ipykernel to be able to use custom kernel in notebooks
+```bash
+python -m ipykernel install --user --name venv_fire --display-name "Python3.10 (venv_fire)"
+```
+
 ### 3. Visual Studio Code setup (Optional, Dev only)
 I suggest installing the following extensions, and configuring them in the settings:
 - Black formatter, then go into VS Code settings > As a Default formatter add Black formatter > Search for Black > To `Black-formatter: Args` add: `--line-length=99`.
@@ -120,4 +125,11 @@ I suggest installing the following extensions, and configuring them in the setti
 
 This ensures there's no need to run pre-commit each time (the linting happens automatically most of the time, because of the extensions), consequently making the code versioning part a little less daunting.
 
-DELETE: test
+### 4. Downloading Data
+- Since the links for downloading expire after a certain time, they cannot be hardcoded in a simple `get_data.py` script. Because of that, it is easier to download the data manualy.
+    - [FLAME 2, visit this link](https://ieee-dataport.org/open-access/flame-2-fire-detection-and-modeling-aerial-multi-spectral-image-dataset?check_logged_in=1)
+        - Download file #9 for frames
+        - Download file #10 for labels
+    - [FireMan, click this link to download](https://zenodo.org/records/13732947/files/Binary.zip?download=1)
+    - [D-Fire, open this link and click download](https://1drv.ms/u/c/c0bd25b6b048b01d/EbLgD7bES4FDvUN37Grxn8QBF5gIBBc7YV2qklF08GCiBw)
+- After downloading the data, move it to the `data` folder and run `prepare_data.py`. (**note: script not implemented yet**)
