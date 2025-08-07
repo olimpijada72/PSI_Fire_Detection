@@ -2,6 +2,7 @@
 # Project directories
 # =========================
 data/*
+!data/embeddings/
 runs/*
 results/*
 
@@ -51,6 +52,7 @@ dist/
 *.tmp
 *.swp
 *.swo
+*.pt
 
 # =========================
 # OS / Editor files
